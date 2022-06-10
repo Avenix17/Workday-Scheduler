@@ -263,3 +263,4 @@ btn17.addEventListener("click", function(event) {
 
 
 setInterval(timeColor, 1000);
+displaySaved();
