@@ -190,11 +190,29 @@ function timeColor() {
 }
 
 function saveEvent() {
-
+    localStorage.setItem("text9", textArea9.value);
+    localStorage.setItem("text10", textArea10.value);
+    localStorage.setItem("text11", textArea11.value);
+    localStorage.setItem("text12", textArea12.value);
+    localStorage.setItem("text13", textArea13.value);
+    localStorage.setItem("text14", textArea14.value);
+    localStorage.setItem("text15", textArea15.value);
+    localStorage.setItem("text16", textArea16.value);
+    localStorage.setItem("text17", textArea17.value);
+    displaySaved();
+    confirmedEvent.classList.remove("hidden");
 }
 
 function displaySaved() {
-
+    textArea9.innerText = localStorage.getItem("text9");
+    textArea10.innerText = localStorage.getItem("text10");
+    textArea11.innerText = localStorage.getItem("text11");
+    textArea12.innerText = localStorage.getItem("text12");
+    textArea13.innerText = localStorage.getItem("text13");
+    textArea14.innerText = localStorage.getItem("text14");
+    textArea15.innerText = localStorage.getItem("text15");
+    textArea16.innerText = localStorage.getItem("text16");
+    textArea17.innerText = localStorage.getItem("text17");
 }
 
 setInterval(timeColor, 1000);
