@@ -215,4 +215,51 @@ function displaySaved() {
     textArea17.innerText = localStorage.getItem("text17");
 }
 
+btn9.addEventListener("click", function(event) {
+    event.preventDefault();
+    saveEvent();
+    displaySaved();
+});
+btn10.addEventListener("click", function(event) {
+    event.preventDefault();
+    saveEvent();
+    displaySaved();
+});
+btn11.addEventListener("click", function(event) {
+    event.preventDefault();
+    saveEvent();
+    displaySaved();
+});
+btn12.addEventListener("click", function(event) {
+    event.preventDefault();
+    saveEvent();
+    displaySaved();
+});
+btn13.addEventListener("click", function(event) {
+    event.preventDefault();
+    saveEvent();
+    displaySaved();
+});
+btn14.addEventListener("click", function(event) {
+    event.preventDefault();
+    saveEvent();
+    displaySaved();
+});
+btn15.addEventListener("click", function(event) {
+    event.preventDefault();
+    saveEvent();
+    displaySaved();
+});
+btn16.addEventListener("click", function(event) {
+    event.preventDefault();
+    saveEvent();
+    displaySaved();
+});
+btn17.addEventListener("click", function(event) {
+    event.preventDefault();
+    saveEvent();
+    displaySaved();
+});
+
+
 setInterval(timeColor, 1000);
