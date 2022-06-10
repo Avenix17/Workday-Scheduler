@@ -7,6 +7,7 @@ var present = document.getElementsByClassName("present");
 var future = document.getElementsByClassName("future");
 var currentTime = new Date().getHours();
 
+//Time Divs
 var time9 = document.getElementById("time9");
 var time10 = document.getElementById("time10");
 var time11 = document.getElementById("time11");
@@ -17,6 +18,7 @@ var time15 = document.getElementById("time15");
 var time16 = document.getElementById("time16");
 var time17 = document.getElementById("time17");
 
+//Textareas
 var textArea9 = document.getElementById("textarea9");
 var textArea10 = document.getElementById("textarea10");
 var textArea11 = document.getElementById("textarea11");
@@ -27,6 +29,7 @@ var textArea15 = document.getElementById("textarea15");
 var textArea16 = document.getElementById("textarea16");
 var textArea17 = document.getElementById("textarea17");
 
+//Save Buttons
 var btn9 = document.getElementById("event-btn9");
 var btn10 = document.getElementById("event-btn10");
 var btn11 = document.getElementById("event-btn11");
@@ -39,10 +42,7 @@ var btn17 = document.getElementById("event-btn17");
 
 var confirmedEvent = document.getElementById("confirmedevent");
 
-// Type in events that save to local storage
-    //Make sure they stay even through page refresh
-    //Create comment that appears under date that says "Event saved to local storage!"
-
+//This function changes the color of the time divs based upon the time of day
 function timeColor() {
     if (time9) {
         if (9 <= currentTime && currentTime < 10) {
@@ -189,6 +189,7 @@ function timeColor() {
     }
 }
 
+//Saves textarea input into local storage. Removes hidden class from event confirmation
 function saveEvent() {
     localStorage.setItem("text9", textArea9.value);
     localStorage.setItem("text10", textArea10.value);
@@ -203,6 +204,7 @@ function saveEvent() {
     confirmedEvent.classList.remove("hidden");
 }
 
+//Displays local storage items within their textareas
 function displaySaved() {
     textArea9.innerText = localStorage.getItem("text9");
     textArea10.innerText = localStorage.getItem("text10");
@@ -215,6 +217,7 @@ function displaySaved() {
     textArea17.innerText = localStorage.getItem("text17");
 }
 
+//Event listeners for each button to activate local storage functions
 btn9.addEventListener("click", function(event) {
     event.preventDefault();
     saveEvent();
@@ -261,6 +264,6 @@ btn17.addEventListener("click", function(event) {
     displaySaved();
 });
 
-
+//Calls timeColor function to run every 1000 milliseconds
 setInterval(timeColor, 1000);
 displaySaved();
